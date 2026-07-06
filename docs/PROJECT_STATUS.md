@@ -5,7 +5,7 @@
 ## 当前阶段
 
 - 里程碑：M0 产品冻结与基准
-- 当前任务：第 1 周 Day 3——候选仓库调研已完成，等待合并
+- 当前任务：第 1 周 Day 4——Click 8.4.2 基线复现已完成，等待人工验收
 - 工作分支：`dev_yzy`
 
 ## 已完成
@@ -21,6 +21,7 @@
 - Day 2 已通过 Pull Request #2 合并到 `main`，并完成本地与远程分支同步。
 - 已完成 Click、Typer、Starlette、HTTPX 候选仓库调研。
 - 已产出带固定调研 commit 和官方来源链接的 `docs/research/repository-candidates.md`。
+- Day 3 已通过 Pull Request #3 合并到 `main`，并完成本地与远程分支同步。
 
 ## Day 2 验收结果
 
@@ -35,6 +36,22 @@
 - Starlette 确认为跨领域盲测集，HTTPX 确认为非阻塞高难度扩展集。
 - Day 4 只进入 Click 历史版本的本地复现，不提前扩展到其他仓库。
 
+## Day 4 当前进度
+
+- 已在 RepoPilot 仓库外克隆 Click，未引入第三方源码到本项目版本控制。
+- 已锁定稳定 tag `8.4.2`，commit 为 `b2e30a175449cfda909ee4fbf4a29a6a071cad53`。
+- Click 工作区处于干净的 detached HEAD，当前为浅克隆。
+- 已确认系统 Python 为 3.12.3，uv 版本为 0.11.26。
+- 已按 `uv.lock` 创建 `.venv`，环境 Python 为 3.12.3，tox 为 4.52.0。
+- tox-uv 为 1.34.0，项目环境中锁定使用 uv 0.11.3。
+- 创建虚拟环境后 Click 工作区仍保持干净。
+- 首次 Python 3.12 基线测试通过：1661 passed、24 skipped、31000 deselected、1 xfailed。
+- 首次 pytest 用时 9.22 秒，tox 总用时 19.12 秒，外层 `time` 实际用时 19.591 秒。
+- 首次测试后 Click 工作区仍保持干净。
+- 第二次基线测试通过，测试数量与第一次完全一致。
+- 第二次 pytest 用时 8.58 秒，tox 总用时 11.05 秒，外层 `time` 实际用时 10.523 秒。
+- 已产出 `docs/research/click-baseline.md`，记录环境、命令、两次结果、耗时和已知限制。
+
 ## 当前风险
 
 - V1.0 规划周期较长，后续任务需要继续严格控制 Python、pytest、单仓库、单 Issue 和单租户边界。
@@ -44,5 +61,5 @@
 
 ## 下一步
 
-- 提交 Day 3 调研文档，通过 Pull Request 合并到 `main`。
-- 合并并同步分支后，开始 Day 4 的 Click 历史版本复现。
+- 人工验收 Click 8.4.2 基线报告和可复现性结论。
+- 验收通过后更新 `DAILY_TASKS.md`，提交并通过 Pull Request 合并到 `main`。
