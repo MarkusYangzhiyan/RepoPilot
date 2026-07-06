@@ -5,7 +5,7 @@
 ## 当前阶段
 
 - 里程碑：M0 产品冻结与基准
-- 当前任务：第 1 周 Day 4——Click 8.4.2 基线复现已完成，等待人工验收
+- 当前任务：第 1 周 Day 5——周复盘与 ADR-001 草案已完成，等待人工验收
 - 工作分支：`dev_yzy`
 
 ## 已完成
@@ -22,6 +22,9 @@
 - 已完成 Click、Typer、Starlette、HTTPX 候选仓库调研。
 - 已产出带固定调研 commit 和官方来源链接的 `docs/research/repository-candidates.md`。
 - Day 3 已通过 Pull Request #3 合并到 `main`，并完成本地与远程分支同步。
+- 已完成 Click 8.4.2 在 Python 3.12 环境中的两次可复现基线测试。
+- 已产出 `docs/research/click-baseline.md`。
+- Day 4 已通过 Pull Request #4 合并到 `main`，并完成本地与远程分支同步。
 
 ## Day 2 验收结果
 
@@ -36,7 +39,7 @@
 - Starlette 确认为跨领域盲测集，HTTPX 确认为非阻塞高难度扩展集。
 - Day 4 只进入 Click 历史版本的本地复现，不提前扩展到其他仓库。
 
-## Day 4 当前进度
+## Day 4 验收结果
 
 - 已在 RepoPilot 仓库外克隆 Click，未引入第三方源码到本项目版本控制。
 - 已锁定稳定 tag `8.4.2`，commit 为 `b2e30a175449cfda909ee4fbf4a29a6a071cad53`。
@@ -51,6 +54,13 @@
 - 第二次基线测试通过，测试数量与第一次完全一致。
 - 第二次 pytest 用时 8.58 秒，tox 总用时 11.05 秒，外层 `time` 实际用时 10.523 秒。
 - 已产出 `docs/research/click-baseline.md`，记录环境、命令、两次结果、耗时和已知限制。
+- 两次测试结果数量完全一致，均无真实失败，满足可复现性要求。
+
+## Day 5 当前进度
+
+- 已建立 `docs/reviews/week-01.md`，记录本周事实、量化证据、调整、风险、未完成项和第 2 周方向。
+- 已建立 `docs/adr/ADR-001-python-single-tenant.md`，记录 Python 单租户方案的背景、备选方案、决策理由和正负后果。
+- Day 5 尚待人工验收，`DAILY_TASKS.md` 暂未标记完成。
 
 ## 当前风险
 
@@ -61,5 +71,5 @@
 
 ## 下一步
 
-- 人工验收 Click 8.4.2 基线报告和可复现性结论。
+- 人工验收第 1 周复盘和 ADR-001。
 - 验收通过后更新 `DAILY_TASKS.md`，提交并通过 Pull Request 合并到 `main`。
