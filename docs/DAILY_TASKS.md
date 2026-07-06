@@ -6,5 +6,5 @@
 |   1 | ~~建立 RepoPilot 项目章程，写清用户、问题、输入、输出和非目标~~  | ~~docs/product/charter.md 能用一分钟解释产品，不出现“万能 Agent”表述~~ |
 |   2 | ~~定义 V1.0 边界：Python、pytest、单仓库、单 Issue、单租户~~     | ~~`docs/product/scope-v1.md`；包含支持/不支持矩阵和修改规模上限~~         |
 |   3 | ~~调研 Click、Typer、Starlette、HTTPX 的许可证、测试命令和贡献规则~~ | ~~`docs/research/repository-candidates.md`；四个仓库均有来源链接和风险~~ |
-|   4 | 本地克隆 Click，锁定一个历史版本并跑通测试                       | 保存环境和命令；测试结果可重复，记录首次耗时和失败项                      |
+|   4 | ~~本地克隆 Click，锁定一个历史版本并跑通测试~~                   | ~~保存环境和命令；测试结果可重复，记录首次耗时和失败项~~                  |
 |   5 | 写周复盘和 ADR-001：为什么先做 Python 单租户版本                 | ADR 合并；列出本周事实、风险和下周决策，不写空泛总结                      |
