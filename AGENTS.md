@@ -12,7 +12,7 @@
 
 开始任何重要任务前，依次阅读：
 
-1. `docs/PRODUCT_CHARTER.md`
+1. `docs/product/charter.md`
 2. `docs/V1_PLAN.md`
 3. `docs/PROJECT_STATUS.md`
 4. 当前阶段对应的 `docs/DAILY_TASKS.md`
